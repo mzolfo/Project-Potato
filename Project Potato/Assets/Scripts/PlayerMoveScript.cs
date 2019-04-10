@@ -10,45 +10,71 @@ public class PlayerMoveScript : MonoBehaviour
     private float jumpImpulse;
     [SerializeField]
     private float movementSpeed;
+
     private Rigidbody2D myRigidBody2d;
-    // Start is called before the first frame update
+
+    private bool onGround = false;
+    private bool canJump = false;
+    private int timesJumped = 0;
+
     void Start()
     {
         myRigidBody2d = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("Jump") && canJump)
+        {
+                Jump();
+        }
+        Debug.Log("Times jumped: "+timesJumped);
 
+        //if (!onGround)
+        //{
+        //    if (Physics2D.OverlapCircle(transform.position, 2f))
+        //    {
+        //        myRigidBody2d.velocity = new Vector2(0, myRigidBody2d.velocity.y);
+        //        Debug.Log("It's working");
+                
+        //    }
+        //}
     }
 
     private void FixedUpdate()
     {
         Move();
-        if (Input.GetButtonDown("Jump"))
-        {
-            Jump();
-        }
     }
 
-    
+    private void OnTriggerEnter2D()
+    {
+        onGround = true;
+        canJump = true;
+        timesJumped = 0;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        onGround = false;
+    }
 
     private void Move()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-
+        horizontalInput = Input.GetAxisRaw("Horizontal");
         Vector2 movementVector = new Vector2(horizontalInput * movementSpeed * Time.deltaTime, myRigidBody2d.velocity.y);
         myRigidBody2d.velocity = movementVector;
+        
     }
 
     private void Jump()
     {
-        Debug.Log("Player Has Jumped");
+        timesJumped++;
         Vector2 movementVector = new Vector2(myRigidBody2d.velocity.x, jumpImpulse * Time.deltaTime);
         myRigidBody2d.velocity = movementVector;
-       // myRigidBody2d.AddForce(new Vector2(0,jumpImpulse), ForceMode2D.Impulse);
+        if (timesJumped >= 2)
+        {
+            canJump = false;
+        }
+        
     }
 
 }
