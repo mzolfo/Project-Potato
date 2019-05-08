@@ -17,28 +17,36 @@ public class PlayerMoveScript : MonoBehaviour
     private bool canJump = false;
     private int timesJumped = 0;
 
+    private enum Joysticks {
+        Keyboard = 1,
+        Joy2 = 2
+    };
+
+    [SerializeField]
+    private Joysticks joystickType;
+
+    private string inputType;
+
     void Start()
     {
+        if (joystickType == Joysticks.Keyboard)
+            inputType = "Keyboard";
+        if (joystickType == Joysticks.Joy2)
+            inputType = "Joy2";
         myRigidBody2d = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && canJump)
+        if (Input.GetButtonDown(inputType + "_Jump") && canJump)
         {
                 Jump();
+            Debug.Log("works");
         }
         Debug.Log("Times jumped: "+timesJumped);
 
-        //if (!onGround)
-        //{
-        //    if (Physics2D.OverlapCircle(transform.position, 2f))
-        //    {
-        //        myRigidBody2d.velocity = new Vector2(0, myRigidBody2d.velocity.y);
-        //        Debug.Log("It's working");
-                
-        //    }
-        //}
+            
+
     }
 
     private void FixedUpdate()
@@ -59,7 +67,7 @@ public class PlayerMoveScript : MonoBehaviour
 
     private void Move()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
+        horizontalInput = Input.GetAxisRaw(inputType + "_Horizontal");
         Vector2 movementVector = new Vector2(horizontalInput * movementSpeed * Time.deltaTime, myRigidBody2d.velocity.y);
         myRigidBody2d.velocity = movementVector;
         
