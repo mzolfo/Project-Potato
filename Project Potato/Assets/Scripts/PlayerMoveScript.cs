@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -41,24 +42,26 @@ public class PlayerMoveScript : MonoBehaviour
         if (Input.GetButtonDown(inputType + "_Jump") && canJump)
         {
                 Jump();
-            Debug.Log("works");
+            //Debug.Log("works");
         }
         Debug.Log("Times jumped: "+timesJumped);
-
-            
-
     }
+
 
     private void FixedUpdate()
     {
         Move();
     }
 
-    private void OnTriggerEnter2D()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        onGround = true;
-        canJump = true;
-        timesJumped = 0;
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            //Debug.Log("Floor found");
+            onGround = true;
+            canJump = true;
+            timesJumped = 0;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
