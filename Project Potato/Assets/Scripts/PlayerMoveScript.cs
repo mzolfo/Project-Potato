@@ -18,13 +18,13 @@ public class PlayerMoveScript : MonoBehaviour
     private bool canJump = false;
     private int timesJumped = 0;
 
-    private enum Joysticks {
+    public enum Joysticks {
         Keyboard = 1,
         Joy2 = 2
     };
 
-    [SerializeField]
-    private Joysticks joystickType;
+    //[SerializeField]
+    public Joysticks joystickType;
 
     private string inputType;
 

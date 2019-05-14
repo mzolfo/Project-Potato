@@ -16,16 +16,40 @@ public class PlayerBombInteractionScript : MonoBehaviour
     private Transform thePlayer;
 
     private GameObject theBomb;
+    private Rigidbody2D bombRigidBody;
 
     private void Start()
     {
-        //bombHeldPosition = new Vector3(playerArm.position.x * -1, playerArm.position.y, playerArm.position.z);
+        
     }
 
     private void Update()
     {
         if (bombIsHeld)
             BombRotationHeld();
+        if (Input.GetButtonDown("Keyboard_Throw"))
+            ThrowBomb();
+        //if (theBomb == null)
+            //ebug.Log("Not holding the bomb");
+    }
+
+    private void ThrowBomb()
+    {
+        Debug.Log("Working");
+
+        bombIsHeld = false;
+        bombRigidBody.isKinematic = false;
+        theBomb.transform.parent = null;
+
+        
+        //HOW DO WITH CONTROLLER?????!!?!?!?!
+        Vector2 throwVector = Input.mousePosition;
+        throwVector = Camera.main.ScreenToWorldPoint(throwVector) - transform.position;
+
+        bombRigidBody.velocity = throwVector;
+        //bombRigidBody.velocity = 100 * (bombRigidBody.velocity.normalized);
+
+        theBomb.GetComponent<BoxCollider2D>().enabled = true;
     }
 
     private void BombRotationHeld()
@@ -37,11 +61,10 @@ public class PlayerBombInteractionScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bomb"))
         {
-            Debug.Log("Bomb thing Working");
-
             if (!bombIsHeld)
             {
                 theBomb = collision.gameObject;
+                bombRigidBody = theBomb.GetComponent<Rigidbody2D>();
                 PickupBomb();
             }
         }
@@ -49,12 +72,12 @@ public class PlayerBombInteractionScript : MonoBehaviour
 
     private void PickupBomb()
     {
-        Rigidbody2D bombRB2D = theBomb.GetComponent<Rigidbody2D>();
-
         bombIsHeld = true;
+        //Should also turn off bomb detector since it can cause problems with throwing the bomb
+
         theBomb.transform.SetParent(thePlayer, false);
 
-        bombRB2D.isKinematic = true;
+        bombRigidBody.isKinematic = true;
 
         theBomb.GetComponent<BoxCollider2D>().enabled = false;
     }
