@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerBombInteractionScript : MonoBehaviour
 {
-
     private bool bombIsHeld;
 
     [SerializeField]
@@ -14,42 +13,59 @@ public class PlayerBombInteractionScript : MonoBehaviour
     private Transform bombHeldPosition;
     [SerializeField]
     private Transform thePlayer;
+    [SerializeField]
+    private Transform throwVectorPos;
+
+    [SerializeField]
+    private float throwSpeed;
+    private float tempTimer = -1;
+    private string inputType;
 
     private GameObject theBomb;
     private Rigidbody2D bombRigidBody;
 
     private void Start()
     {
-        
+        PlayerController myPlayerController = GetComponentInParent<PlayerController>();
+        if (myPlayerController.joystickType == Joysticks.Keyboard)
+            inputType = "Keyboard";
+        else if (myPlayerController.joystickType == Joysticks.Joy2)
+            inputType = "Joy2";
     }
 
     private void Update()
     {
         if (bombIsHeld)
             BombRotationHeld();
-        if (Input.GetButtonDown("Keyboard_Throw"))
+
+        if (Input.GetButtonDown(inputType + "_Throw") && bombIsHeld)
             ThrowBomb();
-        //if (theBomb == null)
-            //ebug.Log("Not holding the bomb");
+
+        if (Time.time >= tempTimer + .05f && tempTimer != -1)
+        {
+            GetComponent<BoxCollider2D>().enabled = true;
+            tempTimer = -1;
+        }
     }
 
     private void ThrowBomb()
     {
-        Debug.Log("Working");
+        //Disable box collider temporarily
+        tempTimer = Time.time;
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        theBomb.GetComponent<BombStatusScript>().ThrownBomb();
 
         bombIsHeld = false;
         bombRigidBody.isKinematic = false;
         theBomb.transform.parent = null;
 
-        
-        //HOW DO WITH CONTROLLER?????!!?!?!?!
-        Vector2 throwVector = Input.mousePosition;
-        throwVector = Camera.main.ScreenToWorldPoint(throwVector) - transform.position;
-
-        bombRigidBody.velocity = throwVector;
-        //bombRigidBody.velocity = 100 * (bombRigidBody.velocity.normalized);
+        Vector2 throwVector = throwVectorPos.position - theBomb.transform.position;
+        bombRigidBody.velocity = throwVector * throwSpeed;
 
         theBomb.GetComponent<BoxCollider2D>().enabled = true;
+
+        theBomb = null;
     }
 
     private void BombRotationHeld()
@@ -73,12 +89,9 @@ public class PlayerBombInteractionScript : MonoBehaviour
     private void PickupBomb()
     {
         bombIsHeld = true;
-        //Should also turn off bomb detector since it can cause problems with throwing the bomb
-
+        theBomb.GetComponent<BombStatusScript>().ResetBomb(transform.parent);
         theBomb.transform.SetParent(thePlayer, false);
-
         bombRigidBody.isKinematic = true;
-
         theBomb.GetComponent<BoxCollider2D>().enabled = false;
     }
 }

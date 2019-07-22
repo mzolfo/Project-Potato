@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ArmMovementScript : MonoBehaviour
 {
-    private PlayerMoveScript myMovementScript;
+    private PlayerController myController;
 
     public Vector2 currentAimAngle;
 
     private void Start()
     {
-        myMovementScript = GetComponentInParent<PlayerMoveScript>();
+        myController = GetComponentInParent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -21,18 +21,21 @@ public class ArmMovementScript : MonoBehaviour
 
     private void ArmRotation()
     {
-        if (myMovementScript.joystickType == PlayerMoveScript.Joysticks.Keyboard)
+        if (myController.joystickType == Joysticks.Keyboard)
         {
             //subtracting player pos from mouse pos 
             Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; // find the angle in degrees
             transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
         }
-        else if (myMovementScript.joystickType == PlayerMoveScript.Joysticks.Joy2)
+        else if (myController.joystickType == Joysticks.Joy2)
         {
-            float rotZ = Mathf.Atan2(Input.GetAxis("Joy2_AimHoriz"), Input.GetAxis("Joy2_AimVert")) * Mathf.Rad2Deg; // find the angle in degrees (isnt trig fun)
-            Quaternion actualRotation = Quaternion.Euler(0f, 0f, rotZ);
-            transform.rotation = Quaternion.Inverse(actualRotation);
+            if (Input.GetAxis("Joy2_AimHoriz") != 0 && Input.GetAxis("Joy2_AimVert") != 0)
+            { 
+                float rotZ = Mathf.Atan2(Input.GetAxis("Joy2_AimHoriz"), Input.GetAxis("Joy2_AimVert")) * Mathf.Rad2Deg; // find the angle in degrees (isn't trig fun)
+                Quaternion actualRotation = Quaternion.Euler(0f, 0f, rotZ);
+                transform.rotation = Quaternion.Inverse(actualRotation);
+            }
         }
     }
 
