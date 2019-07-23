@@ -11,12 +11,23 @@ public class PlayerMoveScript : MonoBehaviour
     private float jumpImpulse;
     [SerializeField]
     private float movementSpeed;
+    [SerializeField]
+    private float dodgeImpulse;
 
     private Rigidbody2D myRigidBody2d;
 
+<<<<<<< HEAD:Project Potato/Assets/Scripts/PlayerMoveScript.cs
     private bool onGround = false;
+=======
+    private bool jump = false;
+    private bool dodge = false;
+>>>>>>> master:Project Potato/Assets/Scripts/PlayerController.cs
     private bool canJump = false;
+    private bool canDodge = true;
+    private bool dodgeRight;
+
     private int timesJumped = 0;
+    private float dodgeCooldown;
 
     public enum Joysticks {
         Keyboard = 1,
@@ -44,13 +55,53 @@ public class PlayerMoveScript : MonoBehaviour
                 Jump();
             //Debug.Log("works");
         }
+<<<<<<< HEAD:Project Potato/Assets/Scripts/PlayerMoveScript.cs
         Debug.Log("Times jumped: "+timesJumped);
+=======
+
+        if (Input.GetButtonDown(inputType + "_Dodge") && canDodge)
+        {
+            Debug.Log("dodge button down");
+            dodge = true;
+            dodgeCooldown = Time.time;
+        }
+
+        if (!canDodge && Time.time >= dodgeCooldown + 1f)
+        {
+            canDodge = true;
+        }
+
+        if (Input.GetAxisRaw(inputType + "_Horizontal") > 0)
+        {
+            dodgeRight = true;
+        }
+        else if (Input.GetAxisRaw(inputType + "_Horizontal") < 0)
+        {
+            dodgeRight = false;
+        }
+
+        //Debug.Log("Times jumped: " + timesJumped);
+>>>>>>> master:Project Potato/Assets/Scripts/PlayerController.cs
     }
 
 
     private void FixedUpdate()
     {
         Move();
+<<<<<<< HEAD:Project Potato/Assets/Scripts/PlayerMoveScript.cs
+=======
+        if (jump)
+        {
+            jump = false;
+            Jump();          
+        }
+        if (dodge)
+        {
+            canDodge = false;
+            dodge = false;
+            Dodge();
+        }
+>>>>>>> master:Project Potato/Assets/Scripts/PlayerController.cs
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -85,6 +136,17 @@ public class PlayerMoveScript : MonoBehaviour
         {
             canJump = false;
         }
+        
+    }
+
+    private void Dodge()
+    {
+        Debug.Log("Dodge fuction activated");
+        horizontalInput = Input.GetAxisRaw(inputType + "_Horizontal");
+        Vector2 movementVector = new Vector2(horizontalInput * dodgeImpulse * 100, myRigidBody2d.velocity.y);
+        myRigidBody2d.AddForce(movementVector);
+        //myRigidBody2d.velocity = movementVector;
+        //myRigidBody2d.AddRelativeForce(movementVector);
         
     }
 
