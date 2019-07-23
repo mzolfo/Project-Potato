@@ -10,37 +10,52 @@ public class BombStatusScript : MonoBehaviour
     private Rigidbody2D myRB2D;
     private Transform targetPlayer;
     [SerializeField]
-    private Text bombTimerText;
-
-    private bool isThrown = false;
+    public bool isThrown = false;
     private bool speedUp = false;
-    private bool timerOn = false;
     [SerializeField]
     private float maxReturnSpeed;
     private float returnSpeed;
     private float speedUpTimer;
+
+    private GameMasterScript theGM;
     [SerializeField]
-    private float bombTimerStart;
-    private float bombTimer;
+    private Transform player1Trans;
+    [SerializeField]
+    private Transform player2Trans;
+
+    int[] array = new int[]{1,2,3,4,5,6,7,8,9,10};
+    private List<int> list = new List<int> { };
 
     private void Start()
     {
         myRB2D = GetComponent<Rigidbody2D>();
-        bombTimer = bombTimerStart;
+        theGM = GameMasterScript._instance;
+        player1Trans = GameObject.FindGameObjectWithTag("Player 1").transform;
+        player2Trans = GameObject.FindGameObjectWithTag("Player 2").transform;
+
+        list.AddRange(array);
+        
     }
 
     private void Update()
     {
-        if (timerOn && bombTimer >= .001)
+        if (player1Trans == null)
+            player1Trans = GameObject.FindGameObjectWithTag("Player 1").transform;
+        if (player2Trans == null)
+            player2Trans = GameObject.FindGameObjectWithTag("Player 2").transform;
+
+        if (targetPlayer == null)
         {
-            bombTimer -= Time.deltaTime;
-            bombTimerText.text = bombTimer.ToString("F2");
+            //float randomStart = Mathf.Round(Random.Range(1, 2));
+            
+            if (GetRandomStart(true) < 5)
+                ResetBomb(player1Trans);
+            else
+                ResetBomb(player2Trans);
+            isThrown = true;
         }
-        else if (!isThrown && bombTimer <= 0)
-        {
-            timerOn = false;
-            BombExplodes();
-        }
+
+
     }
 
     private void FixedUpdate()
@@ -62,14 +77,32 @@ public class BombStatusScript : MonoBehaviour
         }
     }
 
+    int GetRandomStart(bool reloadEmptyList)
+    {
+        if (list.Count == 0)
+        {
+            if (reloadEmptyList)
+            {
+                list.AddRange(array);
+            }
+            else
+                return -1;
+        }
+        int rand = Random.Range(1, list.Count);
+        int value = list[rand];
+        list.RemoveAt(rand);
+        return value;
+
+    }
+
     private void MoveTowardsTarget()
     {
-        Debug.Log("Return speed: " + returnSpeed);
+        //Debug.Log("Return speed: " + returnSpeed);
         Vector2 movementVector = new Vector2();
 
         if (!speedUp)
         {
-            movementVector = (targetPlayer.position - transform.position) / returnSpeed;
+            movementVector = (targetPlayer.position - transform.position) / returnSpeed * 2;
         }
         else
         {
@@ -91,7 +124,7 @@ public class BombStatusScript : MonoBehaviour
         }
         else
         {
-            timerOn = true;
+            theGM.timerOn = true;
             targetPlayer = target;
             Debug.Log("Bomb is currently attached to: " + targetPlayer);
         }
@@ -105,12 +138,15 @@ public class BombStatusScript : MonoBehaviour
         speedUpTimer = Time.time;
     }
 
-    private void BombExplodes()
+    public void BombExplodes()
     {
         // HaloGruntHeadshotSound.mp3
+        GameMasterScript.gameOver = true; // This is for early build only, better win mechanics will be implemented
         Debug.Log("BOOOOOM");
         Destroy(gameObject);
         Destroy(targetPlayer.gameObject);
+
+        
     }
 
 }

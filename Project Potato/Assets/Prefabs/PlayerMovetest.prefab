@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 5900829495121585146}
   m_Layer: 9
   m_Name: PlayerMovetest
-  m_TagString: Player
+  m_TagString: Player 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,6 +407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpImpulse: 25
   movementSpeed: 1000
+  dodgeImpulse: 50
   joystickType: 0
 --- !u!61 &5900829495121585146
 BoxCollider2D:
