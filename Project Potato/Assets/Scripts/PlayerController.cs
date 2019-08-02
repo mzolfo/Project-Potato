@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown(inputType + "_Jump") && canJump)
         {
             //This needs to be in both here and fixed update or physics get wonky on different hardware, also if it's all in fixed theres delay in hitting the jump btn and it working
-            jump = true; 
+            jump = true;
         }
 
         if (Input.GetButtonDown(inputType + "_Dodge") && canDodge)

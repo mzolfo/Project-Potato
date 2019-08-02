@@ -1,0 +1,1254 @@
+fileFormatVersion: 2
+guid: 6433045f69b9ce04298a892fcb6e4bdf
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Platform Tilesets-2_0
+    21300002: Platform Tilesets-2_1
+    21300004: Platform Tilesets-2_2
+    21300006: Platform Tilesets-2_3
+    21300008: Platform Tilesets-2_4
+    21300010: Platform Tilesets-2_5
+    21300012: Platform Tilesets-2_6
+    21300014: Platform Tilesets-2_7
+    21300016: Platform Tilesets-2_8
+    21300018: Platform Tilesets-2_9
+    21300020: Platform Tilesets-2_10
+    21300022: Platform Tilesets-2_11
+    21300024: Platform Tilesets-2_12
+    21300026: Platform Tilesets-2_13
+    21300028: Platform Tilesets-2_14
+    21300030: Platform Tilesets-2_15
+    21300032: Platform Tilesets-2_16
+    21300034: Platform Tilesets-2_17
+    21300036: Platform Tilesets-2_18
+    21300038: Platform Tilesets-2_19
+    21300040: Platform Tilesets-2_20
+    21300042: Platform Tilesets-2_21
+    21300044: Platform Tilesets-2_22
+    21300046: Platform Tilesets-2_23
+    21300048: Platform Tilesets-2_24
+    21300050: Platform Tilesets-2_25
+    21300052: Platform Tilesets-2_26
+    21300054: Platform Tilesets-2_27
+    21300056: Platform Tilesets-2_28
+    21300058: Platform Tilesets-2_29
+    21300060: Platform Tilesets-2_30
+    21300062: Platform Tilesets-2_31
+    21300064: Platform Tilesets-2_32
+    21300066: Platform Tilesets-2_33
+    21300068: Platform Tilesets-2_34
+    21300070: Platform Tilesets-2_35
+    21300072: Platform Tilesets-2_36
+    21300074: Platform Tilesets-2_37
+    21300076: Platform Tilesets-2_38
+    21300078: Platform Tilesets-2_39
+    21300080: Platform Tilesets-2_40
+    21300082: Platform Tilesets-2_41
+    21300084: Platform Tilesets-2_42
+    21300086: Platform Tilesets-2_43
+    21300088: Platform Tilesets-2_44
+    21300090: Platform Tilesets-2_45
+    21300092: Platform Tilesets-2_46
+    21300094: Platform Tilesets-2_47
+    21300096: Platform Tilesets-2_48
+    21300098: Platform Tilesets-2_49
+    21300100: Platform Tilesets-2_50
+    21300102: Platform Tilesets-2_51
+    21300104: Platform Tilesets-2_52
+    21300106: Platform Tilesets-2_53
+    21300108: Platform Tilesets-2_54
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Platform Tilesets-2_0
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 5001
+        width: 284
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6de31947d1cf4439abd2ae0a3007b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_1
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 4999
+        width: 289
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765df95b67a5bbd4c82408572ba84ded
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_2
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 5001
+        width: 288
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadaadc02140f484eb15b01a18167534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_3
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 4642
+        width: 287
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092b5a9e0bd902b4ba122b81657e3c2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_4
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 4642
+        width: 289
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a7153d281faca429e48a6cd4643ae6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_5
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 4642
+        width: 289
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89421c50b76a8140b4ec6c29aea5071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_6
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 4642
+        width: 289
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204b6b4ebd236774487a92b480318257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_7
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 4642
+        width: 287
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b969cdda59a214bb6d1cf5dec340ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_8
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 4303
+        width: 292
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54529eb9ad77d9445a223bdbebd3ed5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_9
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 4303
+        width: 286
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25501baf9e50f24595695e5fdc62bc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_10
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 4303
+        width: 291
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2f2e91c3c338e4a9928fd37a7da6cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_11
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 4303
+        width: 289
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6836f91023d6244c819c757389ae790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_12
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 3993
+        width: 291
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19dbb03da2186c54bbda36c620a0f2c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_13
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 3993
+        width: 292
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476e5450f9c178444a8ae3a60a151211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_14
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 3993
+        width: 286
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab2caab624ef1b4983982f545d92c02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_15
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 3993
+        width: 291
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74009c52e72feb9458ff874ac04b07d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_16
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 3993
+        width: 289
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c97c2f7604508441b2c8629c4825f8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_17
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 3993
+        width: 289
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d5933f43b14434a907ccd70333b804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_18
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 3586
+        width: 292
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3e6e4ae0e8b1445b9a668849c45252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_19
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 3586
+        width: 287
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89036f56bc443ab4299e6d2599cd4f24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_20
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 3586
+        width: 289
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396fb7d156c80d148aeb561d797e7c53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_21
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 3586
+        width: 289
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5469081b012e4bb4c85d48f97c40bdd2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_22
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 3586
+        width: 289
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01582894de63ee64f823cce267c20647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_23
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 3256
+        width: 295
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42770bdf5469f824b8f1b600bdc88d1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_24
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 3256
+        width: 279
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8e1e98c008e5f459b2da4ba84c532a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_25
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 3256
+        width: 281
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb41a88a9e0c064a92d70fed38afbca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_26
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 3256
+        width: 292
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c03dc4e002e88469ec13dd7a6178db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_27
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 2956
+        width: 289
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcaf9782e205184799d61c38cfc5cec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_28
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 2951
+        width: 292
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd33e3fb5c75f94eacd96d3aaa52c59
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_29
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 2951
+        width: 284
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ff80b8a3ba2b74d8dfcf50012be162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_30
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2951
+        width: 286
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764fa70d46a2762458f0b826e12eefce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_31
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 2951
+        width: 289
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32be278e78a6594bb9511a813a37ccb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_32
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 2956
+        width: 287
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4d24795a180134f9f17bad044d377e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_33
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 2625
+        width: 289
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b0e5be814fd504f89446bf43b47e0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_34
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 2625
+        width: 281
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1848b8bfd91ff343a8b90bfbcba9815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_35
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 2649
+        width: 290
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b605ee8fbba984593d50e6679a1e77
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_36
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 2649
+        width: 291
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c112920f9e1c02c46a072e554a933700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_37
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 2625
+        width: 281
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a1d6970e5daed4c8c61c9619e9e496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_38
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 2625
+        width: 291
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d0490073fba734da0c2d813848e58b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_39
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 2333
+        width: 297
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67f42c5594feb4429a07ab3c40fb0a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_40
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 2333
+        width: 286
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96eadf28661fe9d4d8a73e99f95338c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_41
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 2333
+        width: 286
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8943d1b52a9961449feee96bd6deb1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_42
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2333
+        width: 286
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fd0d665fc824c4a8b3bddfe3f1decd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_43
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 2333
+        width: 284
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7037e1e8accaed14ab9d62c620a2f946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_44
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 2333
+        width: 297
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5acfaec149438cf43983855c1542c2b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_45
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1982
+        width: 286
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1838238a342014f8432d3d8d53256a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_46
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1982
+        width: 289
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4086ad3411d9c944e8377e3b74ada549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_47
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 1593
+        width: 1019
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341b03704b0495745802d539835272ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_48
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1481
+        width: 285
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6eb6b36418bce94d99b1257c9ac3bcc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_49
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1481
+        width: 284
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088925da73f8f284eb95e1257ed70b5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_50
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 1559
+        width: 289
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8450a840daf186d4c814ff5c4622baff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_51
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 843
+        width: 1026
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e99199aa25f02548930153ddced07f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_52
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 1221
+        width: 286
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473ca598e4e4c6545af42796f0d9f45e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_53
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 830
+        width: 287
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4f04dbf9be83f408045723b6654764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform Tilesets-2_54
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 74
+        width: 2034
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe604c70989b774289e7d1ff7687803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 984ebd96f32acdb409cbcef4e0ee272d
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

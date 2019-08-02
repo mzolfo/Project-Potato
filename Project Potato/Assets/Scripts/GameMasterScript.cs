@@ -50,6 +50,13 @@ public class GameMasterScript : MonoBehaviour
 
     void Start()
     {
+        
+
+        restartTextBox.enabled = false;
+
+        bombTimer = bombTimerStart;
+        timerTextBox.text = null;
+        ResetGame();
         currentBomb = GameObject.FindGameObjectWithTag("Bomb");
         currentPlayer1 = GameObject.FindGameObjectWithTag("Player 1");
         currentPlayer2 = GameObject.FindGameObjectWithTag("Player 2");
@@ -57,17 +64,18 @@ public class GameMasterScript : MonoBehaviour
 
         if (currentPlayer1 == null || currentPlayer2 == null || currentBomb == null)
             Debug.LogError("Something wasnt found");
-
-        restartTextBox.enabled = false;
-
-        bombTimer = bombTimerStart;
-        timerTextBox.text = null;
     }
 
     void Update()
     {
 
-        if (timerOn && bombTimer > 0)
+        if (timerOn && bombTimer > 0 && currentBombScript.isThrown == true)
+        {
+            bombTimer -= Time.deltaTime / 2;
+            timerTextBox.text = bombTimer.ToString("F2");
+            Debug.Log("Timer is slow?");
+        }
+        else if (timerOn && bombTimer > 0)
         {
             bombTimer -= Time.deltaTime;
             timerTextBox.text = bombTimer.ToString("F2");
@@ -118,21 +126,19 @@ public class GameMasterScript : MonoBehaviour
         currentBomb = theBomb;
         currentBombScript = currentBomb.GetComponent<BombStatusScript>();
 
-        if (currentPlayer1 == null)
-        {
-            GameObject newPlayer1 = Instantiate(player1Prefab, player1RespawnPos);
-            newPlayer1.name = "Player1";
-            currentPlayer1 = newPlayer1;
 
-            currentPlayer2.transform.position = player2RespawnPos.position;
+        if (currentPlayer1 == null && currentPlayer2 == null)
+        {
+            SpawnPlayer1();
+            SpawnPlayer2();
+        }
+        else if (currentPlayer1 == null)
+        {
+            SpawnPlayer1();
         }
         else if (currentPlayer2 == null)
         {
-            GameObject newPlayer2 = Instantiate(player2Prefab, player2RespawnPos);
-            newPlayer2.name = "Player2";
-            currentPlayer2 = newPlayer2;
-
-            currentPlayer1.transform.position = player1RespawnPos.position;
+            SpawnPlayer2();
         }
 
         timerTextBox.text = null;
@@ -140,6 +146,29 @@ public class GameMasterScript : MonoBehaviour
         gameOver = false;
         //canResetGame = false;
     }
+
+    private void SpawnPlayer1()
+    {
+        GameObject newPlayer1 = Instantiate(player1Prefab, player1RespawnPos);
+        newPlayer1.name = "Player1";
+        newPlayer1.transform.parent = null;
+        currentPlayer1 = newPlayer1;
+
+        if (currentPlayer2 != null)
+            currentPlayer2.transform.position = player2RespawnPos.position;
+
+    }
+    private void SpawnPlayer2()
+    {
+        GameObject newPlayer2 = Instantiate(player2Prefab, player2RespawnPos);
+        newPlayer2.name = "Player2";
+        newPlayer2.transform.parent = null;
+        currentPlayer2 = newPlayer2;
+
+        if (currentPlayer1 != null)
+            currentPlayer1.transform.position = player1RespawnPos.position;
+    }
+
 
     private void OnDestroy()
     {
